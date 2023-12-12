@@ -1,7 +1,16 @@
 import java.io.*;
 import java.util.*;
+import org.yaml.snakeyaml.Yaml;
 
 public class Main {
-    File entries = new File("httpEndpoints.yml");
-    
+    public Values values;
+    InputStream input = this.getClass()
+    .getClassLoader()
+    .getResourceAsStream("httpEndpoints.yaml");
+    Yaml yaml = new Yaml();
+    Map<String,Values> obj = yaml.load(input);
+    public void output()
+    {
+        System.out.println(obj);
+    }
 }

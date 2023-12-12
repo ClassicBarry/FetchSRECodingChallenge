@@ -1,13 +1,13 @@
 import java.util.Map;
 
-public class Entry {
+public class Values {
     private String name;
     private String url;
     private String method;
     private Map<String, String> headers;
     private String body;
 
-    public Entry(String name, String url, String method, Map<String, String> headers, String body)
+    public Values(String name, String url, String method, Map<String, String> headers, String body)
     {
         this.name = name;
         this.url = url;
@@ -16,7 +16,7 @@ public class Entry {
         this.body = body;
     }
 
-    public Entry(String name, String url, String method, Map<String, String> headers)
+    public Values(String name, String url, String method, Map<String, String> headers)
     {
         this.name = name;
         this.url = url;
@@ -24,7 +24,7 @@ public class Entry {
         this.headers = headers;
     }
 
-    public Entry(String name, String url, String method, String body)
+    public Values(String name, String url, String method, String body)
     {
         this.name = name;
         this.url = url;
@@ -32,7 +32,7 @@ public class Entry {
         this.body = body;
     }
 
-    public Entry(String name, String url, Map<String, String> headers, String body)
+    public Values(String name, String url, Map<String, String> headers, String body)
     {
         this.name = name;
         this.url = url;
@@ -41,14 +41,14 @@ public class Entry {
         this.body = body;
     }
 
-    public Entry(String name, String url, String method)
+    public Values(String name, String url, String method)
     {
         this.name = name;
         this.url = url;
         this.method = method;
     }
 
-    public Entry(String name, String url,  Map<String, String> headers)
+    public Values(String name, String url,  Map<String, String> headers)
     {
         this.name = name;
         this.url = url;
@@ -56,7 +56,7 @@ public class Entry {
         this.headers = headers;
     }
 
-    public Entry(String name, String url)
+    public Values(String name, String url)
     {
         this.name = name;
         this.url = url;
