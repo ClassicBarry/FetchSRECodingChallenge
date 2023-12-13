@@ -41,6 +41,7 @@ public class Main {
         int currentEndpoint = 0;
         for(String endpoint : endpoints)
         {
+            long startTime = System.currentTimeMillis();
             URL url = new URL(endpoint.get("url"));
             HttpURLConnection connect = url.openConnection().setRequestMethod(endpoint.method);
 
@@ -56,7 +57,9 @@ public class Main {
             }
 
             int code = connect.getResponseCode();
-            if(code > 199 && code < 300)
+            long endTime = System.currentTimeMillis();
+            long latency = endTime - startTime;
+            if(code > 199 && code < 300 && latency < 500)
                 status[currentEndpoint] = 1;
             else
                 status[currentEndpoint] = 0;
