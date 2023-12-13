@@ -1,5 +1,7 @@
 {
     "java.project.referencedLibraries": [
-        "lib/*.jar"
-    ]
+        "lib/**/*.jar",
+        "src/fetch/lib/snakeyaml-2.1.jar"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
